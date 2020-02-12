@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>根目录下创建文件夹的993</title>
+	<title>杨小鱼的仙女哇</title>
+    <!-- 设置移动端视口，禁用缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- 优先使用 IE 最新版本和 Chrome / 让 IE 浏览器运行最新的渲染模式下；添加”chrome=1“将允许站点在使用了谷歌浏览器内嵌框架（Chrome Frame）的客户端渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <!-- 国产双核浏览器，默认使用webkit内核（360支持） -->
+    <meta name="renderer" content="webkit">
+    <!-- 禁止浏览器从本地缓存中调阅页面。--> 
+    <meta http-equiv="pragram" content="no-cache"> 
+    <!-- 网页不保存在缓存中，每次访问都刷新页面。--> 
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate"> 
+    <!-- 禁止数字识自动别为电话号码 -->
+    <meta name="format-detection" content="telephone=no" />
+    <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<h2>杨文芳呀</h2>
+	<audio id="bg_muisc" src=""></audio>
+    <section id="loadingPage">
+        <div class="loading-main text-center">
+            <div class="abs-center">
+                <img src="images/loading.gif" class="loading">
+                <p class="loading-text"></p>
+            </div>
+        </div>
+    </section>
+    <div id="container" v-clock>
+        <section id="indexPage" v-show="currPage=='index'">
+            <div class="container">
+                <div class="title text-center text-bolder">
+                    <p class="text-lg">2020.02.14❤</p>
+                    <p class="text-df">我们的第一个情人节 宝宝要快乐奥❤</p>
+                </div>
+                <div class="img-box w-100">
+                    <img class="w-100" src="images/001.gif">
+                </div>
+                <div class="typed-text">
+                    <span class="element"></span>
+                </div>
+                <div class="btn-box" v-if='btnShow'>
+                    <div class="agree" v-on:click="agreeHandle">
+                        <span>愿意❤</span>
+                    </div>
+                    <div class="refuse" v-on:click="refuseHandle">
+                        <span>丑拒NO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+section#loadingPage {
+	width: 100%;
+	height: 100%;
+	position: relative;
+    background-color: #FFFFFF;
+}
+section#loadingPage img.loading {
+    width: 50%;
+}
+section#loadingPage p.loading-text{
+    font-size: .5rem;
+}
+
+section#indexPage {
+	width: 100%; 
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/bg.png) no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-color: #E6E6FA;
+}
+#indexPage .container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0 .7rem;
+}
+#indexPage .container .title {
+	padding-top: .5rem;
+	font-size: .6rem;
+}
+#indexPage .container .img-box {
+	margin-top: 0.4rem;
+}
+#indexPage .container .typed-text {
+	margin-top: .2rem;
+}
+#indexPage .container .btn-box {
+	display: none;
+	margin-top: .5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#indexPage .container .btn-box span {
+	padding: .2rem .4rem;
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: .2rem;
+}

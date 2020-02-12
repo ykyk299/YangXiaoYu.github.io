@@ -1,0 +1,77 @@
+/*屏幕适配*/
+@media (min-width: 320px){html{font-size: 32px!important;} }
+@media (min-width: 360px){html{font-size: 36px!important;} }
+@media (min-width: 375px){html{font-size: 37.5px!important;} }
+@media (min-width: 384px){html{font-size: 38.4px!important;} }
+@media (min-width: 412px){html{font-size: 41.2px!important;} }
+@media (min-width: 414px){html{font-size: 41.4px!important;} }
+@media (min-width: 448px){html{font-size: 44.8px!important;} }
+@media (min-width: 480px){html{font-size: 48px!important;} }
+@media (min-width: 512px){html{font-size: 51.2px!important;} }
+@media (min-width: 544px){html{font-size: 54.4px!important;} }
+@media (min-width: 576px){html{font-size: 57.6px!important;} }
+@media (min-width: 608px){html{font-size: 60.8px!important;} }
+@media (min-width: 640px){html{font-size: 64px!important;} }
+@media (min-width: 750px){html{font-size: 75px!important;} }
+@media (min-width: 800px){html{font-size: 80px!important;} }
+@media (min-width: 1024px){html{font-size: 102.4px!important;} }
+@media (min-width: 1242px){html{font-size: 124.2px!important;}}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 640px;
+    height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	font-size: .38rem;
+    color: #333;
+}
+
+section,
+div,
+ul,
+li {
+	box-sizing: border-box;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.w-100{
+	width: 100%;
+}
+
+.text-sm {
+	font-size: 0.2rem;
+}
+
+.text-df {
+	font-size: 0.4rem;
+}
+
+.text-lg {
+	font-size: 0.6rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-bolder {
+	font-weight: bolder;
+}
+
+.abs-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
