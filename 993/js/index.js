@@ -1,10 +1,10 @@
 (function() {
 	require([config.configUrl], function() {
-		var rArr = ['typed', 'vue', 'resLoader', 'jquery'];
+		var rArr = ['typed', 'vue', 'resLoader', 'jquery', 'toast'];
 		require(rArr, requireCB);
 	})
 
-	function requireCB(Typed, Vue, resLoader, jquery) {
+	function requireCB(Typed, Vue, resLoader, jquery, toast) {
 		console.log('123');
 		//声音播放
         window.bgMusic = document.getElementById('bg_muisc');
@@ -35,30 +35,57 @@
         			selfData: selfData,
         			currPage: '',
         			btnShow: false,
+        			btn_refuse: false,
         		}
         	},
         	mounted: function() {
-        		
+
         	},
         	methods: {
         		init: function() {
+        			console.log("abc".repeat(3) == "aaabbccc")
         			var _this = this;
         			_this.currPage = 'index';
-	        		var typed = new Typed('.element', {
-				      strings: ['喜欢是乍见之欢❤ <br> 爱是久处不厌❤ <br>时光赐予我们爱人❤ <br> 爱人赋予我们生命❤', '愿有生之年 <br> 只诉温暖不言殇 <br> 倾心相遇, 安暖相陪 <br> 爱你的小鱼丫❤'], //输入内容, 支持html标签
-				      typeSpeed: 150, //打字速度
-				      backSpeed: 50, //回退速度
-				      onComplete: (self) => {
-				      	_this.btnShow = true;
-				      	console.log('onComplete')
-				      },
-				    });
+                    setTimeout(function() {
+                        var typed = new Typed('.element', {
+                            strings: ['喜欢是乍见之欢❤ <br> 爱是久处不厌❤ <br>时光赐予我们爱人❤ <br> 爱人赋予我们生命❤', '愿有生之年 <br> 只诉温暖不言殇 <br> 倾心相遇, 安暖相陪 <br> 爱你的小鱼丫❤'], //输入内容, 支持html标签
+                            typeSpeed: 150, //打字速度
+                            backSpeed: 50, //回退速度
+                            onComplete: (self) => {
+                                _this.btnShow = true;
+                                console.log('onComplete')
+                            },
+                        });
+                    }, 1000)
 	        	},
 	        	agreeHandle: function() {
-	        		// 酸甜苦辣 与你分享 三餐四季 与你共度
+	        		var _this = this;
+	        		toast.y_alert('酸甜苦辣', function() {
+	        			toast.y_alert('与你分享', function() {
+	        				toast.y_alert('三餐四季', function() {
+	        					toast.y_alert('与你共度', function() {
+	        						_this.currPage = 'two';
+                                    setTimeout(function() {
+                                        bubbly({
+                                            colorStart: "#fff4e6",
+                                            colorStop: "#ffe9e4",
+                                            blur: 1,
+                                            compose: "source-over",
+                                            bubbleFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+                                        });
+                                    }, 1000)
+	        					})
+	        				})
+	        			})
+	        		});
 	        	},
 	        	refuseHandle: function() {
-	        		// 怎么能拒绝呢, 我生气了哇 快去点同意丫!!
+	        		var _this = this;
+	        		toast.y_alert('怎么能拒绝你家小鱼呢', function() {
+	        			toast.y_alert('小鱼生气了哇!', function() {
+	        				toast.y_alert('快去点 同意 丫!!')
+	        			})
+	        		});
 	        	}
         	}
         })

@@ -5,7 +5,8 @@ requirejs.config({
         typed: 'typed', // 页面上实现打字效果
         vue: 'vue.min',
         resLoader: 'resLoader',
-        jquery: 'jquery-3.2.1.min'
+        jquery: 'jquery-3.2.1.min',
+        toast: 'toast'
     },
     shim: {
         

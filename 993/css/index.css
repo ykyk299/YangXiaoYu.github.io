@@ -1,3 +1,22 @@
+.fade-enter,.fade-leave-to {
+    opacity: 0;
+}
+.fade-enter-to, .fade-leave {
+    opacity: 1;
+}
+.fade-enter-active ,.fade-leave-active {
+    transition: opacity 1s;
+}
+
+.toggle-rotate {
+    animation: toggle-rotate 5s linear infinite both;
+}
+@keyframes toggle-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 section#loadingPage {
 	width: 100%;
 	height: 100%;
@@ -51,7 +70,11 @@ section#indexPage {
 	margin-top: .5rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
+}
+#indexPage .container .btn-box .agree, #indexPage .container .btn-box .refuse {
+	flex: 1;
+	text-align: center;
 }
 #indexPage .container .btn-box span {
 	padding: .2rem .4rem;

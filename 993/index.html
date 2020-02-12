@@ -17,6 +17,8 @@
     <meta name="format-detection" content="telephone=no" />
     <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/bubbly-bg.js"></script>
+    <link rel="stylesheet" href="../animation/animate.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -31,28 +33,37 @@
         </div>
     </section>
     <div id="container" v-clock>
-        <section id="indexPage" v-show="currPage=='index'">
-            <div class="container">
-                <div class="title text-center text-bolder">
-                    <p class="text-lg">2020.02.14❤</p>
-                    <p class="text-df">我们的第一个情人节 宝宝要快乐奥❤</p>
-                </div>
-                <div class="img-box w-100">
-                    <img class="w-100" src="images/001.gif">
-                </div>
-                <div class="typed-text">
-                    <span class="element"></span>
-                </div>
-                <div class="btn-box" v-if='btnShow'>
-                    <div class="agree" v-on:click="agreeHandle">
-                        <span>愿意❤</span>
+        <transition name="fade">
+            <section id="indexPage" v-show="currPage=='index'">
+                <div class="container">
+                    <div class="title text-center text-bolder">
+                        <p class="text-lg">2020.02.14❤</p>
+                        <p class="text-df">我们的第一个情人节 宝宝要快乐奥❤</p>
                     </div>
-                    <div class="refuse" v-on:click="refuseHandle">
-                        <span>丑拒NO</span>
+                    <div class="img-box w-100">
+                        <img class="w-100" src="images/001.gif">
+                    </div>
+                    <div class="typed-text">
+                        <span class="element"></span>
+                    </div>
+                    <div class="btn-box" v-show='btnShow'>
+                        <div class="agree animated fadeIn" v-on:click="agreeHandle">
+                            <span>愿意❤</span>
+                        </div>
+                        <div class="refuse animated" v-on:click="refuseHandle">
+                            <span>丑拒NO</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </transition>
+        <transition name="fade">
+            <section id="twoPage" v-show="currPage=='two'">
+                <div class="container">
+                    
+                </div>
+            </section>
+        </transition>    
     </div>
     <script src="js/index.js"></script>
 </body>
