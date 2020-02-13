@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<audio id="bg_muisc" src=""></audio>
+	<audio id="bg_muisc" src="./wbcs.mp3" loop preload></audio>
     <section id="loadingPage">
         <div class="loading-main text-center">
             <div class="abs-center">
@@ -33,6 +33,9 @@
         </div>
     </section>
     <div id="container" v-clock>
+        <div class="musicToggle toggle-rotate" v-on:click="toggleMusicHandle">
+            <img v-bind:src="toggleMusic?'images/lu1.jpg':'images/lu2.jpg'">
+        </div>
         <transition name="fade">
             <section id="indexPage" v-show="currPage=='index'">
                 <div class="container">
@@ -60,7 +63,10 @@
         <transition name="fade">
             <section id="twoPage" v-show="currPage=='two'">
                 <div class="container">
-                    
+                    <div class="typed-text">
+                        <span class="twoElement"></span>
+                        <p class="end animated bounceInLeft" v-show="twoEnd" v-on:click="endHandle">❤小彩蛋戳一戳❤</p>
+                    </div>
                 </div>
             </section>
         </transition>    

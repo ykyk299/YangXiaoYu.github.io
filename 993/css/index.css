@@ -9,7 +9,7 @@
 }
 
 .toggle-rotate {
-    animation: toggle-rotate 5s linear infinite both;
+    animation: toggle-rotate 10s linear infinite both;
 }
 @keyframes toggle-rotate {
     to {
@@ -40,6 +40,19 @@ div#container {
 	top: 0;
 	left: 0;
 	z-index: 4;
+}
+div.musicToggle {
+	position: fixed;
+	right: .2rem;
+	top: .2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+div.musicToggle img {
+	width: 100%;
+	/*height: 100%;*/
 }
 section#indexPage {
 	width: 100%; 
@@ -80,4 +93,29 @@ section#indexPage {
 	padding: .2rem .4rem;
 	background-color: rgba(255, 255, 255, .8);
 	border-radius: .2rem;
+}
+
+#twoPage {
+	padding: 2rem 0.5rem;
+	width: 100%; 
+	height: 100%;
+}
+#twoPage .container{
+	width: 100%; 
+	height: 100%;
+	background: url(../images/02.jpg) no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+#twoPage .container .typed-text {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	text-align: center;
+    color: #FFFFFF;
+    padding: .5rem;
+    overflow-y: auto;
+}
+#twoPage .container p.end {
+	margin-top: .3rem;
 }
